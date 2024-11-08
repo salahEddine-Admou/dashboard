@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+@layer base {
+  :root {
+    /* Light Theme */
+    --background: 0 0% 100%; /* White or light background */
+    --foreground: 33 100% 50%; /* Orange foreground (hsl(33, 100%, 50%)) */
+    --muted: 30 100% 90%; /* Light orange for muted (hsl(30, 100%, 90%)) */
+    --muted-foreground: 33 100% 40%; /* Slightly darker orange for muted foreground */
+    --popover: 0 0% 98%; /* Light popover background */
+    --popover-foreground: 33 100% 50%; /* Orange for popover */
+    --card: 0 0% 95%; /* Light card background */
+    --card-foreground: 33 100% 50%; /* Orange for card foreground */
+    --border: 30 100% 80%; /* Light orange border (hsl(30, 100%, 80%)) */
+    --input: 30 100% 80%; /* Same as border for inputs */
+    --primary: 33 100% 50%; /* Primary color: Orange */
+    --primary-foreground: 0 0% 10%; /* Black for text on primary elements */
+    --secondary: 0 0% 90%; /* Light secondary background */
+    --secondary-foreground: 33 100% 50%; /* Orange text on secondary */
+    --accent: 33 100% 50%; /* Accent orange */
+    --accent-foreground: 0 0% 10%; /* Black text on accent */
+    --destructive: 0 84.2% 60.2%; /* Red for destructive actions */
+    --destructive-foreground: 0 0% 100%; /* White text on destructive elements */
+    --ring: 33 100% 50%; /* Orange ring for focus or highlights */
+    --radius: 0.5rem; /* Border radius */
+  }
+
+  .dark {
+    /* Dark Theme */
+    --background: 0 0% 10%; /* Black background */
+    --foreground: 33 100% 50%; /* Orange foreground */
+    --muted: 0 0% 20%; /* Dark gray for muted */
+    --muted-foreground: 0 0% 100%; /* White for muted foreground */
+    --popover: 0 0% 15%; /* Dark popover background */
+    --popover-foreground: 0 0% 100%; /* White for popover */
+    --card: 0 0% 15%; /* Dark card background */
+    --card-foreground: 0 0% 100%; /* White for card foreground */
+    --border: 0 0% 25%; /* Dark gray border */
+    --input: 0 0% 25%; /* Same as border for inputs */
+    --primary: 33 100% 50%; /* Primary color: Orange */
+    --primary-foreground: 0 0% 100%; /* White for text on primary elements */
+    --secondary: 0 0% 20%; /* Dark secondary background */
+    --secondary-foreground: 0 0% 100%; /* White text on secondary */
+    --accent: 33 100% 50%; /* Accent orange */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+    --destructive: 0 84.2% 70.2%; /* Lighter red for destructive actions */
+    --destructive-foreground: 0 0% 100%; /* White text on destructive elements */
+    --ring: 33 100% 50%; /* Orange ring for focus or highlights */
+    --radius: 0.5rem; /* Border radius */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
